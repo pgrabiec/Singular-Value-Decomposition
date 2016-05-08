@@ -17,7 +17,7 @@ public class Main {
                 articlesIO.loadArticles(new File("articles")),
                 articlesIO.getSummary(),
                 true,
-                false
+                true
         );
 
         List<Article> searchResults = statistics.search(
@@ -25,7 +25,8 @@ public class Main {
                         "0",
                         "1",
                         "2",
-                        "3"
+                        "3",
+                        "999999999"
                 },
                 100
         );

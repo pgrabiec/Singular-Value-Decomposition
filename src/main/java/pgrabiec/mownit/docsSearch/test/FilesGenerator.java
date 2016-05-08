@@ -8,8 +8,8 @@ import java.io.IOException;
 public class FilesGenerator {
     private static final int FILES_COUNT = 1000;
     private static final File DIRECTORY = new File("articles");
-    private static final int WORDS_COUNT = 7;
-    private static final int WORDS_SET_SIZE = 1000;
+    private static final int WORDS_COUNT = 10;
+    private static final int WORDS_SET_SIZE = 10;
 
     public static void main(String[] args) {
         try {
@@ -85,6 +85,12 @@ public class FilesGenerator {
                 builder.append(" ");
             }
         }
+
+        boolean randBoolean = Math.random() > 0.5;
+        if (randBoolean) {
+            builder.append(" " + 999999999);
+        }
+
         return builder.toString();
     }
 }
